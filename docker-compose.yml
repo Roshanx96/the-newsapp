@@ -29,7 +29,7 @@ services:
     image: trainwithshubham/two-tier-flask-app:latest
     container_name: flask-app
     ports:
-      - "5000:5000"
+      - "7000:5000"
     environment:
       MYSQL_HOST: mysql
       MYSQL_USER: root
@@ -55,8 +55,8 @@ services:
     logging:
       driver: json-file
       options:
-        max-size: "10m"
+        max-size: "1000m"
         max-file: "3"
 
 networks:
-  twotier:
+  dev-twotier:
