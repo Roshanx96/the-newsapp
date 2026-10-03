@@ -12,6 +12,12 @@ RUN npm run build
 
 # Stage 2: Serve the React application using Nginx
 FROM nginx:stable-alpine
+
+# Add metadata
+LABEL maintainer="DevOps Team"
+LABEL app="React Application"
+LABEL environment="production"
+
 COPY --from=build /app/build /usr/share/nginx/html
 EXPOSE 5000
 CMD ["nginx", "-g", "daemon off;"]
