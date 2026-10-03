@@ -2,19 +2,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: random-app-service
+  name: random-app
   namespace: default
   labels:
-    app: random-app-service
+    app: random-app
 spec:
   replicas: 576
   selector:
     matchLabels:
-      app: random-app-service
+      app: random-app
   template:
     metadata:
       labels:
-        app: random-app-service
+        app: random-app
     spec:
       containers:
         - name: nginx-container
