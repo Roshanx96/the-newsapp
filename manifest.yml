@@ -7,7 +7,7 @@ metadata:
   labels:
     app: random-app-service
 spec:
-  replicas: 3
+  replicas: 576
   selector:
     matchLabels:
       app: random-app-service
