@@ -14,9 +14,9 @@ RUN npm run build
 FROM nginx:stable-alpine
 
 # Add metadata
-LABEL maintainer="DevOps Team"
-LABEL app="React Application"
-LABEL environment="production"
+LABEL maintainer="dev-DevOps Team"
+LABEL app="React Application with Nginx"
+LABEL environment="developement"
 
 COPY --from=build /app/build /usr/share/nginx/html
 EXPOSE 5000
