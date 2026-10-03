@@ -1,6 +1,6 @@
 
 apiVersion: apps/v1
-kind: Deployment
+kind: Deployment-dev
 metadata:
   name: random-app
   namespace: default
@@ -51,7 +51,7 @@ spec:
   selector:
     app: random-app
   ports:
-    - protocol: TCP
+    - protocol: TCP/UDP
       port: 80
       targetPort: 80
       nodePort: 30080000
